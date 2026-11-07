@@ -302,10 +302,14 @@ identify -format '%f %wx%h %[channels]\n' store-assets/screenshots/*.png
 
 ## Store listing URL
 
-After the first submission, note the listing URL and the extension ID here; the
-ID is the value for the `CWS_EXTENSION_ID` environment
-variable (see [RELEASING.md](RELEASING.md); it is public, not a credential). Then
-also add the store link to the README, to the release notes in
+Extension ID: `jgplipgmkfmcknlpakfaoihdhafcgpfi` — set as the `CWS_EXTENSION_ID`
+variable of the `store` environment (see [RELEASING.md](RELEASING.md); it is
+public, not a credential).
+
+Listing URL (live once the review has passed):
+<https://chromewebstore.google.com/detail/jgplipgmkfmcknlpakfaoihdhafcgpfi>
+
+Once it is live, also add the store link to the README, to the release notes in
 [.github/workflows/build.yml](.github/workflows/build.yml) and a "Rate on
 Chrome Web Store" link (listing URL + `/reviews`) to the About section in the
 settings.
