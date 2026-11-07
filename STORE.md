@@ -14,8 +14,8 @@ paste-ready: no quote markers, no line wrapping — copy the whole block as is.
 
 **Name:** comes from `_locales/*/messages.json` (`extName`) — nothing to enter.
 
-- English: `PostReady Screenshots – Exact Sizes for Social Media & Stores`
-- German: `PostReady Screenshots – Exakte Größen für Social Media & Stores`
+`PostReady Screenshots` in both languages — kept short like the other
+extensions; the keywords live in the summary and the description.
 
 **Category:** Productivity
 
