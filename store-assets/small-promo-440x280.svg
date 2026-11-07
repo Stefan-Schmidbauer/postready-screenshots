@@ -1,0 +1,45 @@
+<svg width="440" height="280" viewBox="0 0 440 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="logobg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dbe6fb"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+
+  <rect width="440" height="280" fill="url(#bg)"/>
+
+  <!-- faint capture frames, top-right corner -->
+  <g fill="none" stroke="#ffffff" stroke-width="2" opacity="0.13">
+    <rect x="330" y="-30" width="100" height="62" rx="9"/>
+    <rect x="392" y="200" width="70" height="90" rx="9"/>
+  </g>
+
+  <!-- soft shadow under logo tile -->
+  <rect x="30" y="76" width="140" height="140" rx="32" fill="#0b246e" opacity="0.35" filter="url(#soft)"/>
+
+  <!-- logo tile -->
+  <g id="logo" transform="translate(30,70) scale(1.4)">
+    <rect x="0" y="0" width="100" height="100" rx="23" fill="url(#logobg)"/>
+    <g fill="none" stroke="#2563eb" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 32 V16 H32"/><path d="M68 16 H84 V32"/><path d="M84 68 V84 H68"/><path d="M32 84 H16 V68"/>
+    </g>
+    <rect x="27" y="31" width="46" height="38" rx="5" fill="#2563eb"/>
+    <rect x="31" y="40" width="26" height="25" rx="2" fill="#ffffff"/>
+    <rect x="60" y="40" width="9" height="25" rx="2" fill="#ffffff" opacity="0.75"/>
+  </g>
+
+  <!-- text (and chips) -->
+  <g id="txt" transform="translate(0,-9.7)">
+  <text x="192" y="112" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="31" font-weight="700" fill="#ffffff">PostReady</text>
+  <text x="192" y="146" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="31" font-weight="700" fill="#ffffff">Screenshots</text>
+  <text x="193" y="182" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff">Exact sizes.</text>
+  <text x="193" y="206" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff">No cropping.</text>
+  </g>
+</svg>

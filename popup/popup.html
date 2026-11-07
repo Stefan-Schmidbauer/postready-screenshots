@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PostReady</title>
+    <link rel="stylesheet" href="../ui/base.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="head">
+      <img src="../icons/icon32.png" alt="" width="20" height="20" />
+      <h1>PostReady</h1>
+      <button id="openFolder" class="icon-btn" data-i18n-title="openFolder" data-i18n-aria-label="openFolder"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2.5h8.5A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z"/></svg></button>
+      <button id="openOptions" class="icon-btn" data-i18n-title="settings" data-i18n-aria-label="settings">⚙</button>
+    </header>
+
+    <select id="category" class="category" data-i18n-aria-label="category"></select>
+
+    <div id="formats" class="formats" role="radiogroup" data-i18n-aria-label="size"></div>
+
+    <div class="options">
+      <div id="mode" class="seg" role="radiogroup" data-i18n-aria-label="area"></div>
+      <div id="fileType" class="seg" role="radiogroup" data-i18n-aria-label="fileType"></div>
+      <div id="heightMode" class="seg" role="radiogroup" data-i18n-aria-label="heightMode"></div>
+    </div>
+
+    <label class="filename">
+      <span data-i18n="fileName"></span>
+      <input id="baseName" type="text" placeholder="screenshot" spellcheck="false" autocomplete="off" />
+    </label>
+    <p id="filenamePreview" class="preview"></p>
+
+    <div class="actions">
+      <button id="fit" class="btn" data-i18n="fitWindow"></button>
+      <button id="shoot" class="btn primary" data-i18n="screenshot"></button>
+    </div>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <footer class="foot">
+      <span class="links">
+        <button id="openStudio" class="link" data-i18n="openStudio"></button>
+        <button id="editFormats" class="link" data-i18n="editFormats"></button>
+      </span>
+      <span id="shortcuts" class="muted"></span>
+    </footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

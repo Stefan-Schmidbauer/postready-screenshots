@@ -1,0 +1,437 @@
+{
+  "extName": {
+    "message": "PostReady Screenshots – Exact Sizes for Social Media & Stores"
+  },
+  "extShortName": {
+    "message": "PostReady"
+  },
+  "extDescription": {
+    "message": "Screenshots in the exact size for LinkedIn, Medium, Substack, X, blogs & app stores – the window adapts, incl. side panel."
+  },
+  "cmdShoot": {
+    "message": "Take a screenshot with the selected format"
+  },
+  "cmdFit": {
+    "message": "Fit the window to the selected format"
+  },
+  "modeContentLabel": {
+    "message": "Page + side panel"
+  },
+  "modeContentShort": {
+    "message": "Page + panel"
+  },
+  "modeContentHint": {
+    "message": "Content area below the toolbar: the web page including an open side panel. Requires window sharing in the Studio."
+  },
+  "modeWindowLabel": {
+    "message": "Whole window"
+  },
+  "modeWindowShort": {
+    "message": "Window"
+  },
+  "modeWindowHint": {
+    "message": "The complete browser window including tab strip and toolbar. Requires window sharing in the Studio."
+  },
+  "modePageLabel": {
+    "message": "Web page only"
+  },
+  "modePageShort": {
+    "message": "Page only"
+  },
+  "modePageHint": {
+    "message": "Only the visible page content, without side panel. Works without window sharing."
+  },
+  "heightMode": {
+    "message": "Height"
+  },
+  "heightFixedLabel": {
+    "message": "Exact size"
+  },
+  "heightFixedShort": {
+    "message": "Exact"
+  },
+  "heightFixedHint": {
+    "message": "Width and height match the format exactly."
+  },
+  "heightFreeLabel": {
+    "message": "Free height"
+  },
+  "heightFreeShort": {
+    "message": "Free height"
+  },
+  "heightFreeHint": {
+    "message": "Only the width is fixed: the screenshot keeps the window height, so you can drag the window taller or shorter by hand first."
+  },
+  "defaultCategoryName": {
+    "message": "Category"
+  },
+  "defaultFormatName": {
+    "message": "Format"
+  },
+  "errNoActiveTab": {
+    "message": "No active tab was found in the target window."
+  },
+  "errNoTabSize": {
+    "message": "The size of the active tab is not available."
+  },
+  "errNotNormalWindow": {
+    "message": "The target window is not a regular browser window."
+  },
+  "fitOk": {
+    "message": "$1: $2 px ✓"
+  },
+  "fitTooSmall": {
+    "message": "$1 $2 px doesn’t fit on this screen: the window would have to be $3, but only $4 is available (logical pixels). Move the window to a larger screen$5."
+  },
+  "fitTooSmallDeviceHint": {
+    "message": " or choose “Physical screen pixels” in the settings"
+  },
+  "fitFailed": {
+    "message": "$1 only reaches $2 instead of $3 px – the window manager didn’t apply the size. Is the window docked or tiled?"
+  },
+  "errAspect": {
+    "message": "Aspect ratio doesn’t match: captured $1 px, the target is $2. Please use “Fit window” first (or enable automatic fitting in the settings)."
+  },
+  "noteScaled": {
+    "message": "Scaled from $1 px."
+  },
+  "noteScaledUp": {
+    "message": "Scaled up from $1 px – may be slightly blurry."
+  },
+  "savedAs": {
+    "message": "Saved: $1"
+  },
+  "errWrongWindow": {
+    "message": "The connected window doesn’t match the target window. Please reconnect in the Studio and pick the correct Chrome window."
+  },
+  "noteReducedResolution": {
+    "message": "Window sharing delivers a reduced resolution – page content not inserted losslessly."
+  },
+  "notePageNotFound": {
+    "message": "Page content couldn’t be located in the window image – the whole image comes from window sharing."
+  },
+  "noteNoTabImage": {
+    "message": "The page can’t be captured directly (e.g. chrome://) – the whole image comes from window sharing."
+  },
+  "noteLossless": {
+    "message": "Page content inserted losslessly."
+  },
+  "errPageCapture": {
+    "message": "This page can’t be captured ($1). Internal pages such as chrome:// and the Web Store are blocked for extensions."
+  },
+  "errUnknownAction": {
+    "message": "Unknown action: $1"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "openFolder": {
+    "message": "Open screenshot folder"
+  },
+  "category": {
+    "message": "Category"
+  },
+  "size": {
+    "message": "Size"
+  },
+  "area": {
+    "message": "Area"
+  },
+  "fileType": {
+    "message": "File type"
+  },
+  "fileName": {
+    "message": "File name"
+  },
+  "fitWindow": {
+    "message": "Fit window"
+  },
+  "screenshot": {
+    "message": "Screenshot"
+  },
+  "editFormats": {
+    "message": "Edit formats"
+  },
+  "openStudio": {
+    "message": "Open Studio"
+  },
+  "emptyCategory": {
+    "message": "This category is empty – assign formats under “Edit formats”."
+  },
+  "studioHint": {
+    "message": "Note: the side panel and the window are captured via the Studio window."
+  },
+  "fitting": {
+    "message": "Fitting window …"
+  },
+  "popupShortcut": {
+    "message": "Shot $1"
+  },
+  "studioTitle": {
+    "message": "PostReady Studio"
+  },
+  "statusOff": {
+    "message": "Not connected"
+  },
+  "statusPending": {
+    "message": "Waiting for selection …"
+  },
+  "statusOn": {
+    "message": "Connected"
+  },
+  "connect": {
+    "message": "Connect"
+  },
+  "disconnect": {
+    "message": "Disconnect"
+  },
+  "targetWindow": {
+    "message": "Target window"
+  },
+  "lastScreenshot": {
+    "message": "Last screenshot"
+  },
+  "previewAlt": {
+    "message": "Preview of the last screenshot"
+  },
+  "log": {
+    "message": "Log"
+  },
+  "logEmpty": {
+    "message": "No actions yet."
+  },
+  "studioFootnote": {
+    "message": "This window holds the window sharing. Keep it open (minimizing is fine) – then every further screenshot takes just one click or the keyboard shortcut."
+  },
+  "windowOption": {
+    "message": "Window $1: $2"
+  },
+  "windowOptionConnected": {
+    "message": "Window $1: $2 (connected)"
+  },
+  "newTab": {
+    "message": "New tab"
+  },
+  "logPickWindowTitled": {
+    "message": "In the dialog, select the Chrome window “$1”."
+  },
+  "logPickWindow": {
+    "message": "In the dialog, select the Chrome window."
+  },
+  "errPickCancelled": {
+    "message": "Window selection cancelled."
+  },
+  "logShareEnded": {
+    "message": "Window sharing has ended."
+  },
+  "logConnected": {
+    "message": "Connected."
+  },
+  "logWrongAspect": {
+    "message": "Warning: the selected window has a different aspect ratio than the target window – did you pick the right one?"
+  },
+  "errNoFrame": {
+    "message": "No image is coming from the window sharing. Please reconnect."
+  },
+  "logRecalibrate": {
+    "message": "Invisible window border detected – readjusting the size."
+  },
+  "logNoTarget": {
+    "message": "No target window selected."
+  },
+  "logDisconnected": {
+    "message": "Disconnected."
+  },
+  "logWindowClosed": {
+    "message": "The connected window was closed."
+  },
+  "studioShortcuts": {
+    "message": "Keyboard shortcuts – $1"
+  },
+  "shortcutShot": {
+    "message": "Screenshot: $1"
+  },
+  "shortcutFit": {
+    "message": "Fit: $1"
+  },
+  "optionsTitle": {
+    "message": "PostReady – Settings"
+  },
+  "autoSaved": {
+    "message": "Settings are saved automatically."
+  },
+  "savedBadge": {
+    "message": "Saved ✓"
+  },
+  "formats": {
+    "message": "Formats"
+  },
+  "addCategory": {
+    "message": "Add category"
+  },
+  "resetLibrary": {
+    "message": "Restore defaults"
+  },
+  "formatsIntro": {
+    "message": "In the popup you first choose the category, then the size. A size may appear more than once if it belongs to different categories. Area (page + side panel, window, web page) and file type are set in the popup and apply to every format. The size refers to the captured area, not to the window."
+  },
+  "captureSection": {
+    "message": "Capture"
+  },
+  "autoFitLabel": {
+    "message": "Fit the window automatically before every screenshot"
+  },
+  "autoFitHint": {
+    "message": "Checks and corrects the window size so the area matches the selected format exactly."
+  },
+  "losslessLabel": {
+    "message": "Insert page content losslessly"
+  },
+  "losslessHint": {
+    "message": "The web page is inserted pixel-perfect from a tab capture; only the side panel and browser UI come from window sharing (a video frame, marginally softer)."
+  },
+  "sizeUnitLegend": {
+    "message": "Sizes are given in"
+  },
+  "sizeUnitCss": {
+    "message": "Logical pixels (recommended)"
+  },
+  "sizeUnitDevice": {
+    "message": "Physical screen pixels"
+  },
+  "sizeUnitHint": {
+    "message": "With logical pixels, HiDPI displays (e.g. 200 %) capture at double resolution and scale down sharply to the target size. With physical pixels, the window becomes correspondingly smaller."
+  },
+  "delay": {
+    "message": "Delay"
+  },
+  "delayNone": {
+    "message": "none"
+  },
+  "delaySeconds": {
+    "message": "$1 seconds"
+  },
+  "border": {
+    "message": "Window border"
+  },
+  "delayBorderHint": {
+    "message": "The delay gives you time to open a menu or move the mouse away, for example. Only set the window border if your system draws a visible frame around the window content that shouldn’t be in the picture."
+  },
+  "savingSection": {
+    "message": "Saving"
+  },
+  "subfolder": {
+    "message": "Subfolder in the downloads folder"
+  },
+  "subfolderPlaceholder": {
+    "message": "empty = directly in the downloads folder"
+  },
+  "placeholdersHtml": {
+    "message": "Placeholders: <code>{base}</code> file name from the popup (default “screenshot”), <code>{name}</code> format name, <code>{category}</code>, <code>{w}</code> <code>{h}</code> size, <code>{timestamp}</code> or <code>{date}</code> and <code>{time}</code>, <code>{title}</code> page title, <code>{mode}</code>, <code>{nr}</code> running number."
+  },
+  "example": {
+    "message": "Example:"
+  },
+  "samplePageTitle": {
+    "message": "My sample page"
+  },
+  "jpegQuality": {
+    "message": "JPEG quality"
+  },
+  "saveAsLabel": {
+    "message": "Ask where to save every time"
+  },
+  "hideDownloadUiLabel": {
+    "message": "Hide Chrome’s download indicator while saving"
+  },
+  "hideDownloadUiHint": {
+    "message": "Prevents the download bubble or icon from ending up in the next window screenshot."
+  },
+  "shortcutsSection": {
+    "message": "Keyboard shortcuts"
+  },
+  "editShortcuts": {
+    "message": "Change keyboard shortcuts …"
+  },
+  "notAssigned": {
+    "message": "not assigned"
+  },
+  "categoryNameLabel": {
+    "message": "Category name"
+  },
+  "categoryUp": {
+    "message": "Move category up"
+  },
+  "categoryDown": {
+    "message": "Move category down"
+  },
+  "removeCategory": {
+    "message": "Delete category"
+  },
+  "removeCategoryWithFormats": {
+    "message": "Delete category with $1 format(s)"
+  },
+  "confirmRemoveCategory": {
+    "message": "Click again: delete the category and its formats"
+  },
+  "confirmReset": {
+    "message": "Really reset all formats?"
+  },
+  "addFormat": {
+    "message": "+ Add format"
+  },
+  "emptyFormats": {
+    "message": "No formats in this category yet."
+  },
+  "formatNameLabel": {
+    "message": "Format name"
+  },
+  "widthLabel": {
+    "message": "Width in pixels"
+  },
+  "heightLabel": {
+    "message": "Height in pixels"
+  },
+  "formatUp": {
+    "message": "Move format up"
+  },
+  "formatDown": {
+    "message": "Move format down"
+  },
+  "removeFormat": {
+    "message": "Delete format"
+  },
+  "formatCountOne": {
+    "message": "1 format"
+  },
+  "formatCountMany": {
+    "message": "$1 formats"
+  },
+  "newFormat": {
+    "message": "New format"
+  },
+  "newCategory": {
+    "message": "New category"
+  },
+  "activeInPopup": {
+    "message": "Currently selected in the popup"
+  },
+  "aboutSection": {
+    "message": "About"
+  },
+  "aboutVersion": {
+    "message": "Version $1"
+  },
+  "aboutLicense": {
+    "message": "Free and open source (MIT licence). Everything runs locally – no servers, no tracking."
+  },
+  "aboutSource": {
+    "message": "Source code"
+  },
+  "aboutPrivacy": {
+    "message": "Privacy policy"
+  },
+  "aboutFeedback": {
+    "message": "Send feedback"
+  }
+}

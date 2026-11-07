@@ -1,0 +1,437 @@
+{
+  "extName": {
+    "message": "PostReady Screenshots – Exakte Größen für Social Media & Stores"
+  },
+  "extShortName": {
+    "message": "PostReady"
+  },
+  "extDescription": {
+    "message": "Screenshots exakt im Format von LinkedIn, Medium, Substack, X, Blogs & App-Stores – das Fenster passt sich an, inkl. Sidepanel."
+  },
+  "cmdShoot": {
+    "message": "Screenshot mit dem gewählten Format"
+  },
+  "cmdFit": {
+    "message": "Fenster an das gewählte Format anpassen"
+  },
+  "modeContentLabel": {
+    "message": "Seite + Sidepanel"
+  },
+  "modeContentShort": {
+    "message": "Seite + Panel"
+  },
+  "modeContentHint": {
+    "message": "Content-Bereich unter der Symbolleiste: Webseite inklusive geöffnetem Sidepanel. Benötigt die Fensterfreigabe im Studio."
+  },
+  "modeWindowLabel": {
+    "message": "Ganzes Fenster"
+  },
+  "modeWindowShort": {
+    "message": "Fenster"
+  },
+  "modeWindowHint": {
+    "message": "Komplettes Browserfenster inklusive Tableiste und Symbolleiste. Benötigt die Fensterfreigabe im Studio."
+  },
+  "modePageLabel": {
+    "message": "Nur Webseite"
+  },
+  "modePageShort": {
+    "message": "Nur Seite"
+  },
+  "modePageHint": {
+    "message": "Nur der sichtbare Seiteninhalt, ohne Sidepanel. Funktioniert ohne Fensterfreigabe."
+  },
+  "heightMode": {
+    "message": "Höhe"
+  },
+  "heightFixedLabel": {
+    "message": "Exakte Größe"
+  },
+  "heightFixedShort": {
+    "message": "Exakt"
+  },
+  "heightFixedHint": {
+    "message": "Breite und Höhe entsprechen genau dem Format."
+  },
+  "heightFreeLabel": {
+    "message": "Höhe frei"
+  },
+  "heightFreeShort": {
+    "message": "Höhe frei"
+  },
+  "heightFreeHint": {
+    "message": "Nur die Breite ist fest: Beim Screenshot wird die Höhe nicht angepasst, du kannst das Fenster vorher von Hand länger oder kürzer ziehen."
+  },
+  "defaultCategoryName": {
+    "message": "Kategorie"
+  },
+  "defaultFormatName": {
+    "message": "Format"
+  },
+  "errNoActiveTab": {
+    "message": "Im Zielfenster wurde kein aktiver Tab gefunden."
+  },
+  "errNoTabSize": {
+    "message": "Die Größe des aktiven Tabs ist nicht verfügbar."
+  },
+  "errNotNormalWindow": {
+    "message": "Das Zielfenster ist kein normales Browserfenster."
+  },
+  "fitOk": {
+    "message": "$1: $2 px ✓"
+  },
+  "fitTooSmall": {
+    "message": "$1 $2 px passt nicht auf diesen Bildschirm: Das Fenster müsste $3 groß sein, verfügbar sind $4 (logische Pixel). Fenster auf einen größeren Bildschirm ziehen$5."
+  },
+  "fitTooSmallDeviceHint": {
+    "message": " oder in den Einstellungen „Physische Bildschirmpixel“ wählen"
+  },
+  "fitFailed": {
+    "message": "$1 erreicht nur $2 statt $3 px – der Fenstermanager hat die Größe nicht übernommen. Ist das Fenster angedockt oder gekachelt?"
+  },
+  "errAspect": {
+    "message": "Seitenverhältnis passt nicht: aufgenommen wurden $1 px, Ziel ist $2. Bitte zuerst „Fenster anpassen“ verwenden (oder in den Einstellungen die automatische Anpassung aktivieren)."
+  },
+  "noteScaled": {
+    "message": "Skaliert von $1 px."
+  },
+  "noteScaledUp": {
+    "message": "Vergrößert von $1 px – evtl. leicht unscharf."
+  },
+  "savedAs": {
+    "message": "Gespeichert: $1"
+  },
+  "errWrongWindow": {
+    "message": "Das verbundene Fenster passt nicht zum Zielfenster. Bitte im Studio neu verbinden und das richtige Chrome-Fenster wählen."
+  },
+  "noteReducedResolution": {
+    "message": "Die Fensterfreigabe liefert eine reduzierte Auflösung – Seiteninhalt nicht verlustfrei eingesetzt."
+  },
+  "notePageNotFound": {
+    "message": "Seiteninhalt im Fensterbild nicht eindeutig gefunden – Bild stammt vollständig aus der Fensterfreigabe."
+  },
+  "noteNoTabImage": {
+    "message": "Seite nicht direkt aufnehmbar (z. B. chrome://) – Bild stammt vollständig aus der Fensterfreigabe."
+  },
+  "noteLossless": {
+    "message": "Seiteninhalt verlustfrei eingesetzt."
+  },
+  "errPageCapture": {
+    "message": "Diese Seite kann nicht aufgenommen werden ($1). Interne Seiten wie chrome:// und der Web Store sind für Extensions gesperrt."
+  },
+  "errUnknownAction": {
+    "message": "Unbekannte Aktion: $1"
+  },
+  "settings": {
+    "message": "Einstellungen"
+  },
+  "openFolder": {
+    "message": "Screenshot-Ordner öffnen"
+  },
+  "category": {
+    "message": "Kategorie"
+  },
+  "size": {
+    "message": "Größe"
+  },
+  "area": {
+    "message": "Bereich"
+  },
+  "fileType": {
+    "message": "Dateityp"
+  },
+  "fileName": {
+    "message": "Dateiname"
+  },
+  "fitWindow": {
+    "message": "Fenster anpassen"
+  },
+  "screenshot": {
+    "message": "Screenshot"
+  },
+  "editFormats": {
+    "message": "Formate bearbeiten"
+  },
+  "openStudio": {
+    "message": "Studio öffnen"
+  },
+  "emptyCategory": {
+    "message": "Diese Kategorie ist leer – Formate lassen sich unter „Formate bearbeiten“ zuordnen."
+  },
+  "studioHint": {
+    "message": "Hinweis: Sidepanel und Fenster werden über das Studio-Fenster aufgenommen."
+  },
+  "fitting": {
+    "message": "Passe Fenster an …"
+  },
+  "popupShortcut": {
+    "message": "Foto $1"
+  },
+  "studioTitle": {
+    "message": "PostReady Studio"
+  },
+  "statusOff": {
+    "message": "Nicht verbunden"
+  },
+  "statusPending": {
+    "message": "Warte auf Auswahl …"
+  },
+  "statusOn": {
+    "message": "Verbunden"
+  },
+  "connect": {
+    "message": "Verbinden"
+  },
+  "disconnect": {
+    "message": "Trennen"
+  },
+  "targetWindow": {
+    "message": "Zielfenster"
+  },
+  "lastScreenshot": {
+    "message": "Letzter Screenshot"
+  },
+  "previewAlt": {
+    "message": "Vorschau des letzten Screenshots"
+  },
+  "log": {
+    "message": "Protokoll"
+  },
+  "logEmpty": {
+    "message": "Noch keine Aktionen."
+  },
+  "studioFootnote": {
+    "message": "Dieses Fenster hält die Fensterfreigabe. Lass es geöffnet (minimieren ist ok), dann reicht für jeden weiteren Screenshot ein Klick oder das Tastenkürzel."
+  },
+  "windowOption": {
+    "message": "Fenster $1: $2"
+  },
+  "windowOptionConnected": {
+    "message": "Fenster $1: $2 (verbunden)"
+  },
+  "newTab": {
+    "message": "Neuer Tab"
+  },
+  "logPickWindowTitled": {
+    "message": "Bitte im Dialog das Chrome-Fenster „$1“ auswählen."
+  },
+  "logPickWindow": {
+    "message": "Bitte im Dialog das Chrome-Fenster auswählen."
+  },
+  "errPickCancelled": {
+    "message": "Fensterauswahl abgebrochen."
+  },
+  "logShareEnded": {
+    "message": "Die Fensterfreigabe wurde beendet."
+  },
+  "logConnected": {
+    "message": "Verbunden."
+  },
+  "logWrongAspect": {
+    "message": "Achtung: Das gewählte Fenster hat ein anderes Seitenverhältnis als das Zielfenster – richtiges Fenster gewählt?"
+  },
+  "errNoFrame": {
+    "message": "Von der Fensterfreigabe kommt kein Bild. Bitte neu verbinden."
+  },
+  "logRecalibrate": {
+    "message": "Unsichtbarer Fensterrand erkannt – Größe wird nachjustiert."
+  },
+  "logNoTarget": {
+    "message": "Kein Zielfenster ausgewählt."
+  },
+  "logDisconnected": {
+    "message": "Getrennt."
+  },
+  "logWindowClosed": {
+    "message": "Das verbundene Fenster wurde geschlossen."
+  },
+  "studioShortcuts": {
+    "message": "Tastenkürzel – $1"
+  },
+  "shortcutShot": {
+    "message": "Screenshot: $1"
+  },
+  "shortcutFit": {
+    "message": "Anpassen: $1"
+  },
+  "optionsTitle": {
+    "message": "PostReady – Einstellungen"
+  },
+  "autoSaved": {
+    "message": "Einstellungen werden automatisch gespeichert."
+  },
+  "savedBadge": {
+    "message": "Gespeichert ✓"
+  },
+  "formats": {
+    "message": "Formate"
+  },
+  "addCategory": {
+    "message": "Kategorie hinzufügen"
+  },
+  "resetLibrary": {
+    "message": "Standard wiederherstellen"
+  },
+  "formatsIntro": {
+    "message": "Im Popup wählst du zuerst die Kategorie, dann die Größe. Ein Format darf mehrfach vorkommen, wenn es fachlich zu verschiedenen Kategorien gehört. Bereich (Seite + Sidepanel, Fenster, Webseite) und Dateityp stellst du im Popup ein – sie gelten für jedes Format. Die Größe bezieht sich auf den aufgenommenen Bereich, nicht auf das Fenster."
+  },
+  "captureSection": {
+    "message": "Aufnahme"
+  },
+  "autoFitLabel": {
+    "message": "Fenster vor jedem Screenshot automatisch anpassen"
+  },
+  "autoFitHint": {
+    "message": "Prüft und korrigiert die Fenstergröße, damit der Bereich exakt dem gewählten Format entspricht."
+  },
+  "losslessLabel": {
+    "message": "Seiteninhalt verlustfrei einsetzen"
+  },
+  "losslessHint": {
+    "message": "Die Webseite wird pixelgenau per Tab-Aufnahme eingefügt; nur Sidepanel und Browser-Oberfläche stammen aus der Fensterfreigabe (Videobild, minimal weicher)."
+  },
+  "sizeUnitLegend": {
+    "message": "Größenangaben in"
+  },
+  "sizeUnitCss": {
+    "message": "Logischen Pixeln (empfohlen)"
+  },
+  "sizeUnitDevice": {
+    "message": "Physischen Bildschirmpixeln"
+  },
+  "sizeUnitHint": {
+    "message": "Bei logischen Pixeln wird auf HiDPI-Displays (z. B. 200 %) mit doppelter Auflösung aufgenommen und scharf auf die Zielgröße verkleinert. Bei physischen Pixeln wird das Fenster entsprechend kleiner."
+  },
+  "delay": {
+    "message": "Verzögerung"
+  },
+  "delayNone": {
+    "message": "keine"
+  },
+  "delaySeconds": {
+    "message": "$1 Sekunden"
+  },
+  "border": {
+    "message": "Fensterrand"
+  },
+  "delayBorderHint": {
+    "message": "Die Verzögerung gibt Zeit, z. B. ein Menü zu öffnen oder die Maus wegzubewegen. Den Fensterrand nur setzen, wenn das System einen sichtbaren Rahmen um den Fensterinhalt zeichnet, der nicht mit aufs Bild soll."
+  },
+  "savingSection": {
+    "message": "Speichern"
+  },
+  "subfolder": {
+    "message": "Unterordner im Download-Ordner"
+  },
+  "subfolderPlaceholder": {
+    "message": "leer = direkt im Download-Ordner"
+  },
+  "placeholdersHtml": {
+    "message": "Platzhalter: <code>{basis}</code> Dateiname aus dem Popup (Standard „screenshot“), <code>{name}</code> Formatname, <code>{kategorie}</code>, <code>{w}</code> <code>{h}</code> Größe, <code>{zeitstempel}</code> bzw. <code>{datum}</code> und <code>{zeit}</code>, <code>{titel}</code> Seitentitel, <code>{modus}</code>, <code>{nr}</code> fortlaufende Nummer."
+  },
+  "example": {
+    "message": "Beispiel:"
+  },
+  "samplePageTitle": {
+    "message": "Meine Beispielseite"
+  },
+  "jpegQuality": {
+    "message": "JPEG-Qualität"
+  },
+  "saveAsLabel": {
+    "message": "Jedes Mal nachfragen, wo gespeichert werden soll"
+  },
+  "hideDownloadUiLabel": {
+    "message": "Download-Anzeige von Chrome während des Speicherns ausblenden"
+  },
+  "hideDownloadUiHint": {
+    "message": "Verhindert, dass Download-Blase oder -Symbol auf dem nächsten Fenster-Screenshot landen."
+  },
+  "shortcutsSection": {
+    "message": "Tastenkürzel"
+  },
+  "editShortcuts": {
+    "message": "Tastenkürzel ändern …"
+  },
+  "notAssigned": {
+    "message": "nicht belegt"
+  },
+  "categoryNameLabel": {
+    "message": "Name der Kategorie"
+  },
+  "categoryUp": {
+    "message": "Kategorie nach oben"
+  },
+  "categoryDown": {
+    "message": "Kategorie nach unten"
+  },
+  "removeCategory": {
+    "message": "Kategorie löschen"
+  },
+  "removeCategoryWithFormats": {
+    "message": "Kategorie mit $1 Format(en) löschen"
+  },
+  "confirmRemoveCategory": {
+    "message": "Nochmal klicken: Kategorie samt Formaten löschen"
+  },
+  "confirmReset": {
+    "message": "Wirklich alle Formate zurücksetzen?"
+  },
+  "addFormat": {
+    "message": "+ Format hinzufügen"
+  },
+  "emptyFormats": {
+    "message": "Noch keine Formate in dieser Kategorie."
+  },
+  "formatNameLabel": {
+    "message": "Name des Formats"
+  },
+  "widthLabel": {
+    "message": "Breite in Pixeln"
+  },
+  "heightLabel": {
+    "message": "Höhe in Pixeln"
+  },
+  "formatUp": {
+    "message": "Format nach oben"
+  },
+  "formatDown": {
+    "message": "Format nach unten"
+  },
+  "removeFormat": {
+    "message": "Format löschen"
+  },
+  "formatCountOne": {
+    "message": "1 Format"
+  },
+  "formatCountMany": {
+    "message": "$1 Formate"
+  },
+  "newFormat": {
+    "message": "Neues Format"
+  },
+  "newCategory": {
+    "message": "Neue Kategorie"
+  },
+  "activeInPopup": {
+    "message": "Aktuell im Popup ausgewählt"
+  },
+  "aboutSection": {
+    "message": "Über PostReady"
+  },
+  "aboutVersion": {
+    "message": "Version $1"
+  },
+  "aboutLicense": {
+    "message": "Kostenlos und Open Source (MIT-Lizenz). Alles läuft lokal – keine Server, kein Tracking."
+  },
+  "aboutSource": {
+    "message": "Quellcode"
+  },
+  "aboutPrivacy": {
+    "message": "Datenschutz"
+  },
+  "aboutFeedback": {
+    "message": "Feedback senden"
+  }
+}

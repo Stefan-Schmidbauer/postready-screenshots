@@ -1,0 +1,77 @@
+body { padding: 14px; }
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.head h1 { flex: 1; font-size: 15px; }
+
+.pill {
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.pill::before { content: '● '; }
+.pill.off { background: var(--surface-2); color: var(--muted); }
+.pill.pending { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); }
+.pill.on { background: color-mix(in srgb, var(--ok) 18%, transparent); color: var(--ok); }
+
+main { display: grid; gap: 12px; }
+
+.card {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.card h2 { font-size: 13px; }
+
+.field { display: grid; gap: 4px; }
+.field > span { font-size: 12px; font-weight: 600; color: var(--muted); }
+.field select { width: 100%; min-width: 0; }
+
+.row { display: flex; gap: 8px; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.row select { flex: 1; }
+
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+.hint { margin: 0; color: var(--muted); font-size: 12px; }
+.hint.mono { margin-top: -6px; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
+.field input[type='text'] { width: 100%; }
+.footnote { padding: 0 4px; }
+
+.result img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: repeating-conic-gradient(var(--surface-2) 0 25%, transparent 0 50%) 0 0 / 16px 16px;
+}
+.meta { margin: 0; font-size: 12px; overflow-wrap: anywhere; }
+.notes { margin: 0; padding-left: 18px; color: var(--muted); font-size: 12px; }
+.notes:empty { display: none; }
+
+.log {
+  display: grid;
+  gap: 4px;
+  max-height: 180px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+  font-size: 12px;
+}
+.log li { display: flex; gap: 8px; }
+.log time { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+.log li.ok span { color: var(--ok); }
+.log li.err span { color: var(--err); }
+.log:empty::before { content: attr(data-empty); color: var(--muted); }

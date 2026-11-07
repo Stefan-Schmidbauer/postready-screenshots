@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="optionsTitle">PostReady – Settings</title>
+    <link rel="stylesheet" href="../ui/base.css" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <header class="page-head">
+      <img src="../icons/icon48.png" alt="" width="36" height="36" />
+      <div>
+        <h1>PostReady</h1>
+        <p class="muted">
+          <span data-i18n="autoSaved"></span>
+          <span id="saved" class="ok" data-i18n="savedBadge" hidden></span>
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="card-head">
+          <h2 data-i18n="formats"></h2>
+          <div class="add">
+            <button id="addCategory" class="btn" data-i18n="addCategory"></button>
+            <button id="resetLibrary" class="btn" data-i18n="resetLibrary"></button>
+          </div>
+        </div>
+        <p class="muted" data-i18n="formatsIntro"></p>
+        <div id="library" class="library"></div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="captureSection"></h2>
+        <div class="grid">
+          <label class="check">
+            <input type="checkbox" data-key="autoFit" />
+            <span>
+              <span data-i18n="autoFitLabel"></span>
+              <small data-i18n="autoFitHint"></small>
+            </span>
+          </label>
+          <label class="check">
+            <input type="checkbox" data-key="lossless" />
+            <span>
+              <span data-i18n="losslessLabel"></span>
+              <small data-i18n="losslessHint"></small>
+            </span>
+          </label>
+          <fieldset class="radios">
+            <legend data-i18n="sizeUnitLegend"></legend>
+            <label><input type="radio" name="sizeUnit" value="css" data-key="sizeUnit" /> <span data-i18n="sizeUnitCss"></span></label>
+            <label><input type="radio" name="sizeUnit" value="device" data-key="sizeUnit" /> <span data-i18n="sizeUnitDevice"></span></label>
+            <small class="muted" data-i18n="sizeUnitHint"></small>
+          </fieldset>
+          <div class="inline-fields">
+            <label>
+              <span data-i18n="delay"></span>
+              <select id="delay" data-key="delaySec" data-type="number">
+                <option value="0" data-i18n="delayNone"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="5"></option>
+                <option value="10"></option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="border"></span>
+              <span class="unit"><input type="number" min="0" max="50" data-key="border" data-type="number" /> px</span>
+            </label>
+          </div>
+          <small class="muted" data-i18n="delayBorderHint"></small>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="savingSection"></h2>
+        <div class="grid">
+          <label class="stack">
+            <span data-i18n="subfolder"></span>
+            <input type="text" data-key="subfolder" data-i18n-placeholder="subfolderPlaceholder" />
+          </label>
+          <label class="stack">
+            <span data-i18n="fileName"></span>
+            <input type="text" data-key="filenamePattern" spellcheck="false" />
+          </label>
+          <p class="muted" data-i18n-html="placeholdersHtml"></p>
+          <p class="preview"><span data-i18n="example"></span> <code id="filenamePreview"></code></p>
+          <label class="inline-label">
+            <span data-i18n="jpegQuality"></span>
+            <span class="unit"><input type="number" min="10" max="100" data-key="jpegQuality" data-type="number" /> %</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" data-key="saveAs" />
+            <span data-i18n="saveAsLabel"></span>
+          </label>
+          <label class="check">
+            <input type="checkbox" data-key="hideDownloadUi" />
+            <span>
+              <span data-i18n="hideDownloadUiLabel"></span>
+              <small data-i18n="hideDownloadUiHint"></small>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="shortcutsSection"></h2>
+        <ul id="shortcuts" class="shortcuts"></ul>
+        <p><button id="editShortcuts" class="link" data-i18n="editShortcuts"></button></p>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="aboutSection"></h2>
+        <p><strong>PostReady Screenshots</strong> <span id="version" class="muted"></span></p>
+        <p class="muted" data-i18n="aboutLicense"></p>
+        <p class="about-links">
+          <a id="linkSource" target="_blank" rel="noopener" data-i18n="aboutSource"></a>
+          <a id="linkPrivacy" target="_blank" rel="noopener" data-i18n="aboutPrivacy"></a>
+          <a id="linkFeedback" data-i18n="aboutFeedback"></a>
+        </p>
+      </section>
+    </main>
+
+    <template id="categoryTpl">
+      <article class="category">
+        <div class="category-head">
+          <input type="text" class="c-name" data-i18n-aria-label="categoryNameLabel" />
+          <span class="c-count muted"></span>
+          <button class="icon-btn c-up" data-i18n-title="categoryUp" data-i18n-aria-label="categoryUp">↑</button>
+          <button class="icon-btn c-down" data-i18n-title="categoryDown" data-i18n-aria-label="categoryDown">↓</button>
+          <button class="icon-btn c-remove" data-i18n-title="removeCategory" data-i18n-aria-label="removeCategory">✕</button>
+        </div>
+        <div class="c-formats" data-i18n-data-empty="emptyFormats"></div>
+        <button class="link c-add" data-i18n="addFormat"></button>
+      </article>
+    </template>
+
+    <template id="formatTpl">
+      <div class="format-row">
+        <input type="text" class="f-name" data-i18n-aria-label="formatNameLabel" />
+        <span class="size">
+          <input type="number" class="f-width" min="100" max="7680" data-i18n-aria-label="widthLabel" />
+          <span class="muted">×</span>
+          <input type="number" class="f-height" min="100" max="4320" data-i18n-aria-label="heightLabel" />
+          <span class="muted">px</span>
+        </span>
+        <select class="f-category" data-i18n-aria-label="category"></select>
+        <span class="f-actions">
+          <button class="icon-btn f-up" data-i18n-title="formatUp" data-i18n-aria-label="formatUp">↑</button>
+          <button class="icon-btn f-down" data-i18n-title="formatDown" data-i18n-aria-label="formatDown">↓</button>
+          <button class="icon-btn f-remove" data-i18n-title="removeFormat" data-i18n-aria-label="removeFormat">✕</button>
+        </span>
+      </div>
+    </template>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
