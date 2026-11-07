@@ -175,6 +175,13 @@ instead of opening a public issue.
 Questions or feedback? Email [support@ancroo.com](mailto:support@ancroo.com) or
 open an [issue](https://github.com/Stefan-Schmidbauer/postready-screenshots/issues).
 
+## Trademarks
+
+PostReady Screenshots is not affiliated with or endorsed by LinkedIn,
+X/Twitter, YouTube, Medium, Substack, dev.to, Hashnode, Product Hunt, GitHub,
+Google, Mozilla, Microsoft or Apple. Product names are used only to describe
+image formats; all trademarks belong to their respective owners.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
