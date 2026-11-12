@@ -64,7 +64,7 @@ Free and open source (MIT licence) — the full source is on GitHub, so you can 
 
 Questions or feedback? Email support@ancroo.com — happy to help.
 
-PostReady is not affiliated with or endorsed by LinkedIn, X/Twitter, YouTube, Medium, Substack, dev.to, Hashnode, Product Hunt, GitHub, Google, Mozilla, Microsoft or Apple. Product names are used only to describe image formats; all trademarks belong to their respective owners.
+PostReady is an independent project and not affiliated with or endorsed by any of the platforms named above. Product names are used only to describe image formats; all trademarks belong to their respective owners.
 
 Source code, issues and licence:
 https://github.com/Stefan-Schmidbauer/postready-screenshots
@@ -116,7 +116,7 @@ Kostenlos und Open Source (MIT-Lizenz) – der komplette Quellcode liegt auf Git
 
 Fragen oder Feedback? Schreib an support@ancroo.com – ich helfe gern.
 
-PostReady steht in keiner Verbindung zu LinkedIn, X/Twitter, YouTube, Medium, Substack, dev.to, Hashnode, Product Hunt, GitHub, Google, Mozilla, Microsoft oder Apple und wird von ihnen nicht unterstützt. Produktnamen dienen nur zur Bezeichnung der Bildformate; alle Marken gehören ihren jeweiligen Inhabern.
+PostReady ist ein unabhängiges Projekt und steht in keiner Verbindung zu den oben genannten Plattformen. Produktnamen dienen nur zur Bezeichnung der Bildformate; alle Marken gehören ihren jeweiligen Inhabern.
 
 Quellcode, Issues und Lizenz:
 https://github.com/Stefan-Schmidbauer/postready-screenshots
