@@ -6,21 +6,17 @@ import {
   captureProfile,
   defaultLibrary,
   DEFAULT_SETTINGS,
+  delayChoices,
   newId,
 } from '../lib/settings.js';
 import { formatFilename } from '../lib/output.js';
 import { t, localizeDocument } from '../lib/i18n.js';
+import { setupAbout } from '../ui/about.js';
 
 localizeDocument();
 
 const $ = (sel, root = document) => root.querySelector(sel);
 
-const REPO_URL = 'https://github.com/Stefan-Schmidbauer/postready-screenshots';
-const LINKS = {
-  linkSource: REPO_URL,
-  linkPrivacy: `${REPO_URL}/blob/main/PRIVACY.md`,
-  linkFeedback: 'mailto:support@ancroo.com',
-};
 let settings = await loadSettings();
 let saveTimer = null;
 let savedTimer = null;
@@ -225,17 +221,22 @@ $('#resetLibrary').addEventListener('click', (e) => {
   });
 });
 
-// Pick up the selection from popup/Studio, so our next save does not overwrite it
+// Pick up what popup/Studio change, so our next save does not overwrite it
+const REMOTE_KEYS = ['activeCategoryId', 'activeFormatId', 'mode', 'fileType', 'heightMode', 'baseName', 'delaySec', 'sizeUnit'];
+
 chrome.storage.onChanged.addListener((changes, area) => {
   const next = area === 'local' && changes.settings?.newValue;
   if (!next) return;
-  const keys = ['activeCategoryId', 'activeFormatId', 'mode', 'fileType', 'heightMode', 'baseName'];
-  if (keys.every((k) => settings[k] === next[k])) return;
-  for (const k of keys) settings[k] = next[k];
+  if (REMOTE_KEYS.every((k) => settings[k] === next[k])) return;
+  for (const k of REMOTE_KEYS) settings[k] = next[k];
   for (const row of document.querySelectorAll('.format-row')) {
     const active = row.dataset.id === settings.activeFormatId;
     row.classList.toggle('active', active);
     row.title = active ? t('activeInPopup') : '';
+  }
+  renderDelayOptions();
+  for (const el of document.querySelectorAll('[data-key]')) {
+    if (REMOTE_KEYS.includes(el.dataset.key)) fillInput(el);
   }
   updatePreview();
 });
@@ -243,17 +244,23 @@ chrome.storage.onChanged.addListener((changes, area) => {
 /* ---------- General settings ---------- */
 
 function renderDelayOptions() {
-  for (const option of $('#delay').options) {
-    if (Number(option.value) > 0) option.textContent = t('delaySeconds', option.value);
-  }
+  $('#delay').replaceChildren(
+    ...delayChoices(settings.delaySec).map((n) => new Option(n ? t('delaySeconds', n) : t('delayNone'), n)),
+  );
+  $('#delay').value = settings.delaySec;
+}
+
+function fillInput(el) {
+  const key = el.dataset.key;
+  if (el.type === 'checkbox') el.checked = settings[key];
+  else if (el.type === 'radio') el.checked = settings[key] === el.value;
+  else el.value = settings[key];
 }
 
 function bindGeneral() {
   for (const el of document.querySelectorAll('[data-key]')) {
     const key = el.dataset.key;
-    if (el.type === 'checkbox') el.checked = settings[key];
-    else if (el.type === 'radio') el.checked = settings[key] === el.value;
-    else el.value = settings[key];
+    fillInput(el);
 
     const event = el.type === 'checkbox' || el.type === 'radio' || el.tagName === 'SELECT' ? 'change' : 'input';
     el.addEventListener(event, () => {
@@ -284,9 +291,32 @@ async function renderShortcuts() {
 
 $('#editShortcuts').addEventListener('click', () => chrome.tabs.create({ url: 'chrome://extensions/shortcuts' }));
 
-// About: the version comes straight from the manifest, so it can never drift
-$('#version').textContent = t('aboutVersion', chrome.runtime.getManifest().version);
-for (const [id, href] of Object.entries(LINKS)) $(`#${id}`).href = href;
+/* ---------- Tabs ---------- */
+
+// The popup and Studio pick the tab via session storage (see openSettingsPage)
+function showTab(tab) {
+  if (!document.querySelector(`.tab[data-tab="${tab}"]`)) tab = 'formats';
+  for (const button of document.querySelectorAll('.tab')) {
+    const selected = button.dataset.tab === tab;
+    button.setAttribute('aria-selected', selected);
+    $(`#${button.getAttribute('aria-controls')}`).hidden = !selected;
+  }
+}
+
+for (const button of document.querySelectorAll('.tab')) {
+  button.addEventListener('click', () => {
+    showTab(button.dataset.tab);
+    chrome.storage.session.set({ optionsTab: button.dataset.tab }); // a reload stays on this tab
+  });
+}
+
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area === 'session' && changes.optionsTab?.newValue) showTab(changes.optionsTab.newValue);
+});
+
+const { optionsTab } = await chrome.storage.session.get('optionsTab');
+showTab(optionsTab);
+setupAbout($('#openAbout'));
 
 renderLibrary();
 renderDelayOptions();

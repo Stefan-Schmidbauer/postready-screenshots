@@ -57,7 +57,7 @@ Privacy first: PostReady collects no data, uses no analytics and never sends any
 
 Good to know:
 • Chrome doesn't let extensions capture internal pages (chrome://) or the Chrome Web Store directly. In "Page + side panel" and "Whole window" mode these pages still work via window sharing; "Web page only" doesn't.
-• Very large formats such as 4K (3840 × 2160) need a large enough screen – or switch the size unit to physical screen pixels in the settings.
+• Very large formats such as 4K (3840 × 2160) need a large enough screen – or switch the size unit to physical screen pixels in the popup.
 • Available in English and German.
 
 Free and open source (MIT licence) — the full source is on GitHub, so you can read exactly what it does before you install it.
@@ -109,7 +109,7 @@ Datenschutz zuerst: PostReady erhebt keine Daten, nutzt keine Analyse und sendet
 
 Gut zu wissen:
 • Chrome erlaubt Extensions nicht, interne Seiten (chrome://) oder den Chrome Web Store direkt aufzunehmen. Mit „Seite + Sidepanel“ und „Ganzes Fenster“ klappt es über die Fensterfreigabe trotzdem, mit „Nur Webseite“ nicht.
-• Sehr große Formate wie 4K (3840 × 2160) brauchen einen ausreichend großen Bildschirm – oder du stellst die Größenangabe in den Einstellungen auf physische Bildschirmpixel um.
+• Sehr große Formate wie 4K (3840 × 2160) brauchen einen ausreichend großen Bildschirm – oder du stellst die Größenangabe im Popup auf physische Bildschirmpixel um.
 • Verfügbar auf Deutsch und Englisch.
 
 Kostenlos und Open Source (MIT-Lizenz) – der komplette Quellcode liegt auf GitHub, du kannst also vor der Installation nachlesen, was die Erweiterung tut.
@@ -144,7 +144,7 @@ https://github.com/Stefan-Schmidbauer/postready-screenshots/blob/main/PRIVACY.md
 ```
 
 The repo must be public for this to resolve for reviewers and users — it is the
-same URL the About section in the settings links to.
+same URL the About dialog (ⓘ in the popup and settings) links to.
 
 ---
 
@@ -182,7 +182,7 @@ Required to save each screenshot as an image file (PNG or JPEG) into a subfolder
 ### `storage`
 
 ```text
-Used to remember the user's own settings locally via chrome.storage.local: the format library (categories, names and pixel sizes), the selected format, capture area, file type, file name and save options. chrome.storage.session holds the result of the last capture so the popup can show it. No data is transmitted; storage is entirely local.
+Used to remember the user's own settings locally via chrome.storage.local: the format library (categories, names and pixel sizes), the selected format, capture area, file type, file name and save options. chrome.storage.session holds the result of the last capture so the popup can show it, and which tab of the settings page to show. No data is transmitted; storage is entirely local.
 ```
 
 ### `system.display`

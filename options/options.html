@@ -10,118 +10,111 @@
   <body>
     <header class="page-head">
       <img src="../icons/icon48.png" alt="" width="36" height="36" />
-      <div>
+      <div class="title">
         <h1>PostReady</h1>
         <p class="muted">
           <span data-i18n="autoSaved"></span>
           <span id="saved" class="ok" data-i18n="savedBadge" hidden></span>
         </p>
       </div>
+      <button id="openAbout" class="icon-btn" data-i18n-title="about" data-i18n-aria-label="about"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.5v.01"/></svg></button>
     </header>
 
+    <nav class="tabs" role="tablist">
+      <button id="tab-formats" class="tab" role="tab" data-tab="formats" aria-controls="panel-formats" data-i18n="formats"></button>
+      <button id="tab-options" class="tab" role="tab" data-tab="options" aria-controls="panel-options" data-i18n="tabOptions"></button>
+    </nav>
+
     <main>
-      <section class="card">
-        <div class="card-head">
-          <h2 data-i18n="formats"></h2>
-          <div class="add">
-            <button id="addCategory" class="btn" data-i18n="addCategory"></button>
-            <button id="resetLibrary" class="btn" data-i18n="resetLibrary"></button>
+      <div id="panel-formats" class="panel" role="tabpanel" aria-labelledby="tab-formats">
+        <section class="card">
+          <div class="card-head">
+            <h2 data-i18n="formats"></h2>
+            <div class="add">
+              <button id="addCategory" class="btn" data-i18n="addCategory"></button>
+              <button id="resetLibrary" class="btn" data-i18n="resetLibrary"></button>
+            </div>
           </div>
-        </div>
-        <p class="muted" data-i18n="formatsIntro"></p>
-        <div id="library" class="library"></div>
-      </section>
+          <p class="muted" data-i18n="formatsIntro"></p>
+          <div id="library" class="library"></div>
+        </section>
+      </div>
 
-      <section class="card">
-        <h2 data-i18n="captureSection"></h2>
-        <div class="grid">
-          <label class="check">
-            <input type="checkbox" data-key="autoFit" />
-            <span>
-              <span data-i18n="autoFitLabel"></span>
-              <small data-i18n="autoFitHint"></small>
-            </span>
-          </label>
-          <label class="check">
-            <input type="checkbox" data-key="lossless" />
-            <span>
-              <span data-i18n="losslessLabel"></span>
-              <small data-i18n="losslessHint"></small>
-            </span>
-          </label>
-          <fieldset class="radios">
-            <legend data-i18n="sizeUnitLegend"></legend>
-            <label><input type="radio" name="sizeUnit" value="css" data-key="sizeUnit" /> <span data-i18n="sizeUnitCss"></span></label>
-            <label><input type="radio" name="sizeUnit" value="device" data-key="sizeUnit" /> <span data-i18n="sizeUnitDevice"></span></label>
-            <small class="muted" data-i18n="sizeUnitHint"></small>
-          </fieldset>
-          <div class="inline-fields">
-            <label>
-              <span data-i18n="delay"></span>
-              <select id="delay" data-key="delaySec" data-type="number">
-                <option value="0" data-i18n="delayNone"></option>
-                <option value="2"></option>
-                <option value="3"></option>
-                <option value="5"></option>
-                <option value="10"></option>
-              </select>
+      <div id="panel-options" class="panel" role="tabpanel" aria-labelledby="tab-options">
+        <section class="card">
+          <h2 data-i18n="captureSection"></h2>
+          <div class="grid">
+            <label class="check">
+              <input type="checkbox" data-key="autoFit" />
+              <span>
+                <span data-i18n="autoFitLabel"></span>
+                <small data-i18n="autoFitHint"></small>
+              </span>
             </label>
-            <label>
-              <span data-i18n="border"></span>
-              <span class="unit"><input type="number" min="0" max="50" data-key="border" data-type="number" /> px</span>
+            <label class="check">
+              <input type="checkbox" data-key="lossless" />
+              <span>
+                <span data-i18n="losslessLabel"></span>
+                <small data-i18n="losslessHint"></small>
+              </span>
+            </label>
+            <fieldset class="radios">
+              <legend data-i18n="sizeUnitLegend"></legend>
+              <label><input type="radio" name="sizeUnit" value="css" data-key="sizeUnit" /> <span data-i18n="sizeUnitCss"></span></label>
+              <label><input type="radio" name="sizeUnit" value="device" data-key="sizeUnit" /> <span data-i18n="sizeUnitDevice"></span></label>
+              <small class="muted" data-i18n="sizeUnitHint"></small>
+            </fieldset>
+            <div class="inline-fields">
+              <label>
+                <span data-i18n="delay"></span>
+                <select id="delay" data-key="delaySec" data-type="number"></select>
+              </label>
+              <label>
+                <span data-i18n="border"></span>
+                <span class="unit"><input type="number" min="0" max="50" data-key="border" data-type="number" /> px</span>
+              </label>
+            </div>
+            <small class="muted" data-i18n="delayBorderHint"></small>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 data-i18n="savingSection"></h2>
+          <div class="grid">
+            <label class="stack">
+              <span data-i18n="subfolder"></span>
+              <input type="text" data-key="subfolder" data-i18n-placeholder="subfolderPlaceholder" />
+            </label>
+            <label class="stack">
+              <span data-i18n="fileName"></span>
+              <input type="text" data-key="filenamePattern" spellcheck="false" />
+            </label>
+            <p class="muted" data-i18n-html="placeholdersHtml"></p>
+            <p class="preview"><span data-i18n="example"></span> <code id="filenamePreview"></code></p>
+            <label class="inline-label">
+              <span data-i18n="jpegQuality"></span>
+              <span class="unit"><input type="number" min="10" max="100" data-key="jpegQuality" data-type="number" /> %</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" data-key="saveAs" />
+              <span data-i18n="saveAsLabel"></span>
+            </label>
+            <label class="check">
+              <input type="checkbox" data-key="hideDownloadUi" />
+              <span>
+                <span data-i18n="hideDownloadUiLabel"></span>
+                <small data-i18n="hideDownloadUiHint"></small>
+              </span>
             </label>
           </div>
-          <small class="muted" data-i18n="delayBorderHint"></small>
-        </div>
-      </section>
+        </section>
 
-      <section class="card">
-        <h2 data-i18n="savingSection"></h2>
-        <div class="grid">
-          <label class="stack">
-            <span data-i18n="subfolder"></span>
-            <input type="text" data-key="subfolder" data-i18n-placeholder="subfolderPlaceholder" />
-          </label>
-          <label class="stack">
-            <span data-i18n="fileName"></span>
-            <input type="text" data-key="filenamePattern" spellcheck="false" />
-          </label>
-          <p class="muted" data-i18n-html="placeholdersHtml"></p>
-          <p class="preview"><span data-i18n="example"></span> <code id="filenamePreview"></code></p>
-          <label class="inline-label">
-            <span data-i18n="jpegQuality"></span>
-            <span class="unit"><input type="number" min="10" max="100" data-key="jpegQuality" data-type="number" /> %</span>
-          </label>
-          <label class="check">
-            <input type="checkbox" data-key="saveAs" />
-            <span data-i18n="saveAsLabel"></span>
-          </label>
-          <label class="check">
-            <input type="checkbox" data-key="hideDownloadUi" />
-            <span>
-              <span data-i18n="hideDownloadUiLabel"></span>
-              <small data-i18n="hideDownloadUiHint"></small>
-            </span>
-          </label>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 data-i18n="shortcutsSection"></h2>
-        <ul id="shortcuts" class="shortcuts"></ul>
-        <p><button id="editShortcuts" class="link" data-i18n="editShortcuts"></button></p>
-      </section>
-
-      <section class="card">
-        <h2 data-i18n="aboutSection"></h2>
-        <p><strong>PostReady Screenshots</strong> <span id="version" class="muted"></span></p>
-        <p class="muted" data-i18n="aboutLicense"></p>
-        <p class="about-links">
-          <a id="linkSource" target="_blank" rel="noopener" data-i18n="aboutSource"></a>
-          <a id="linkPrivacy" target="_blank" rel="noopener" data-i18n="aboutPrivacy"></a>
-          <a id="linkFeedback" data-i18n="aboutFeedback"></a>
-        </p>
-      </section>
+        <section class="card">
+          <h2 data-i18n="shortcutsSection"></h2>
+          <ul id="shortcuts" class="shortcuts"></ul>
+          <p><button id="editShortcuts" class="link" data-i18n="editShortcuts"></button></p>
+        </section>
+      </div>
     </main>
 
     <template id="categoryTpl">

@@ -4,8 +4,11 @@ import {
   captureProfile,
   formatsIn,
   selectCategory,
+  delayChoices,
+  openSettingsPage,
   MODES,
   HEIGHT_MODES,
+  SIZE_UNITS,
   FORMATS,
 } from '../lib/settings.js';
 import { fitToProfile, ensureFit, getActiveTab, captureTabImage, getCalib, setCalib, sleep } from '../lib/window-fit.js';
@@ -87,6 +90,9 @@ function renderSelection() {
   fillSelect('#mode', Object.entries(MODES).map(([v, m]) => [v, m.label]), settings.mode);
   fillSelect('#fileType', Object.entries(FORMATS).map(([v, f]) => [v, f.label]), settings.fileType);
   fillSelect('#heightMode', Object.entries(HEIGHT_MODES).map(([v, h]) => [v, h.label]), settings.heightMode);
+  fillSelect('#sizeUnit', Object.entries(SIZE_UNITS).map(([v, u]) => [v, u.short]), settings.sizeUnit);
+  $('#sizeUnit').title = SIZE_UNITS[settings.sizeUnit].hint;
+  fillSelect('#delay', delayChoices(settings.delaySec).map((n) => [n, n ? t('delaySeconds', n) : t('delayNone')]), settings.delaySec);
   $('#profileHint').textContent = `${MODES[settings.mode].hint} ${HEIGHT_MODES[settings.heightMode].hint}`;
   // do not overwrite while the user is typing here
   if (document.activeElement !== $('#baseName')) $('#baseName').value = settings.baseName;
@@ -370,7 +376,9 @@ $('#format').addEventListener('change', (e) => updateSelection(() => (settings.a
 $('#mode').addEventListener('change', (e) => updateSelection(() => (settings.mode = e.target.value)));
 $('#fileType').addEventListener('change', (e) => updateSelection(() => (settings.fileType = e.target.value)));
 $('#heightMode').addEventListener('change', (e) => updateSelection(() => (settings.heightMode = e.target.value)));
-$('#editFormats').addEventListener('click', () => chrome.runtime.openOptionsPage());
+$('#sizeUnit').addEventListener('change', (e) => updateSelection(() => (settings.sizeUnit = e.target.value)));
+$('#delay').addEventListener('change', (e) => updateSelection(() => (settings.delaySec = Number(e.target.value))));
+$('#editFormats').addEventListener('click', () => openSettingsPage('formats'));
 
 let baseNameTimer = null;
 $('#baseName').addEventListener('input', (e) => {
@@ -384,7 +392,7 @@ $('#baseName').addEventListener('keydown', (e) => {
 });
 
 $('#window').addEventListener('focus', () => refreshWindows());
-$('#openOptions').addEventListener('click', () => chrome.runtime.openOptionsPage());
+$('#openOptions').addEventListener('click', () => openSettingsPage('options'));
 $('#openFolder').addEventListener('click', openScreenshotFolder);
 
 chrome.storage.onChanged.addListener(async (changes, area) => {

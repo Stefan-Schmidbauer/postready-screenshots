@@ -1,6 +1,7 @@
 body { padding: 32px 16px 48px; }
 
 .page-head,
+.tabs,
 main {
   max-width: 820px;
   margin: 0 auto;
@@ -12,10 +13,32 @@ main {
   gap: 14px;
   margin-bottom: 20px;
 }
+.page-head .title { flex: 1; }
 .page-head h1 { font-size: 20px; }
 .page-head p { margin: 2px 0 0; }
 
-main { display: grid; gap: 16px; }
+main,
+.panel { display: grid; gap: 16px; }
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.tab {
+  margin-bottom: -1px;
+  padding: 8px 14px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tab:hover { color: var(--text); }
+.tab[aria-selected='true'] { border-bottom-color: var(--accent); color: var(--accent); }
 
 .card {
   display: grid;
@@ -126,7 +149,3 @@ code {
   .format-row { grid-template-columns: 1fr auto; }
   .format-row .f-category { grid-column: 1; }
 }
-
-.about-links { display: flex; flex-wrap: wrap; gap: 6px 18px; }
-.about-links a { color: var(--accent); text-decoration: none; }
-.about-links a:hover { text-decoration: underline; }

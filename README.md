@@ -36,14 +36,16 @@ For development, or to run a build you made yourself:
 
 1. In the popup, pick a **category** (e.g. *Extension stores*) and then a
    **size** (e.g. *Chrome Web Store* – 1280 × 800).
-2. Choose the **area**, the **height** (*Exact* or *Free height*, see below) and
-   the **file type** (PNG/JPEG) — they apply to every size.
+2. Choose the **area**, the **height** (*Exact* or *Free height*, see below),
+   the **file type** (PNG/JPEG) and whether sizes are **logical or physical
+   pixels** — they apply to every size.
 3. Optionally enter a **file name** (empty = `screenshot`). Images are saved as
    `name-format-timestamp`, e.g.
    `release-2.0-Chrome-Web-Store-2026-10-29_14-05-12.png`; the preview below the
    field shows the exact name. <kbd>Enter</kbd> in the field takes the
    screenshot.
 4. Click **Screenshot** or press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>.
+   The ⏱ field next to the button sets a countdown, e.g. to open a menu first.
 5. For *Page + side panel* and *Whole window*, the **Studio window** opens the
    first time and asks which window to share → pick the Chrome window with your
    page. *Web page only* needs no Studio.
@@ -104,8 +106,8 @@ window of its own holds the stream.
   as it would at 1280 × 800 without scaling; the capture is taken at full
   resolution and scaled down to the target size — very sharp at 200 %,
   slightly softer at odd factors such as 125 % or 130 %.
-- For a 1:1 capture without any scaling, either choose *physical screen pixels*
-  in the settings (the page then shows less content, since everything is
+- For a 1:1 capture without any scaling, either switch to *Physical* pixels
+  in the popup (the page then shows less content, since everything is
   larger), or start Chrome with `--force-device-scale-factor=1`.
 - Invisible window borders (Windows) and shadow borders (Linux) are detected and
   calibrated automatically; fractional scaling (e.g. 125 %) is handled.
@@ -120,7 +122,8 @@ window of its own holds the stream.
 
 ## Settings
 
-Right-click the icon → **Options** (or ⚙ in the popup):
+Right-click the icon → **Options** (or ⚙ in the popup). The page has two tabs:
+*Formats* (*Edit formats* in the popup opens it) and *Options* (⚙):
 
 ![Settings page with the format library](assets/screenshots/postready-screenshots-settings.png)
 
@@ -130,7 +133,9 @@ Right-click the icon → **Options** (or ⚙ in the popup):
   (Extension stores, Mac App Store, LinkedIn, Articles & blogs, README & Docs,
   Web & Social, Screen sizes). New default categories of later versions are added
   automatically without touching your own changes.
-- Automatic window fitting, countdown (shown on the toolbar icon), window border.
+- Automatic window fitting, countdown (shown on the toolbar icon), logical or
+  physical pixels, window border. Countdown and pixels can also be switched in
+  the popup and the Studio.
 - Subfolder, file name pattern (`{base}`, `{name}`, `{category}`, `{w}`, `{h}`,
   `{timestamp}`, `{date}`, `{time}`, `{title}`, `{mode}`, `{nr}` — German
   placeholders such as `{basis}` or `{zeitstempel}` work as well), JPEG quality,
@@ -138,7 +143,8 @@ Right-click the icon → **Options** (or ⚙ in the popup):
 - Hide Chrome's download bubble while saving, so it doesn't end up in the next
   window screenshot.
 
-Keyboard shortcuts can be changed at `chrome://extensions/shortcuts`.
+Keyboard shortcuts can be changed at `chrome://extensions/shortcuts`. The ⓘ
+button (popup and settings) shows version, links and feedback.
 
 ## Languages
 

@@ -416,14 +416,11 @@
   "activeInPopup": {
     "message": "Aktuell im Popup ausgewählt"
   },
-  "aboutSection": {
-    "message": "Über PostReady"
-  },
   "aboutVersion": {
-    "message": "Version $1"
+    "message": "Version"
   },
   "aboutLicense": {
-    "message": "Kostenlos und Open Source (MIT-Lizenz). Alles läuft lokal – keine Server, kein Tracking."
+    "message": "Lizenz"
   },
   "aboutSource": {
     "message": "Quellcode"
@@ -433,5 +430,47 @@
   },
   "aboutFeedback": {
     "message": "Feedback senden"
+  },
+  "aboutRate": {
+    "message": "Im Chrome Web Store bewerten"
+  },
+  "tabOptions": {
+    "message": "Optionen"
+  },
+  "about": {
+    "message": "Über PostReady"
+  },
+  "close": {
+    "message": "Schließen"
+  },
+  "aboutTagline": {
+    "message": "Screenshots exakt im richtigen Format"
+  },
+  "aboutMotto": {
+    "message": "FORMAT. FENSTER. FERTIG."
+  },
+  "aboutAuthor": {
+    "message": "Autor"
+  },
+  "aboutPrivacyLink": {
+    "message": "Erklärung"
+  },
+  "aboutLocal": {
+    "message": "Alles läuft lokal – keine Server, kein Tracking."
+  },
+  "aboutAi": {
+    "message": "Mit Hilfe von KI entwickelt (Claude von Anthropic)"
+  },
+  "sizeUnit": {
+    "message": "Pixel"
+  },
+  "sizeUnitCssShort": {
+    "message": "Logisch"
+  },
+  "sizeUnitDeviceShort": {
+    "message": "Physisch"
+  },
+  "delayShort": {
+    "message": "⏱ $1 s"
   }
 }

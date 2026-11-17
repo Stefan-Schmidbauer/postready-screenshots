@@ -1,6 +1,19 @@
-import { loadSettings, saveSettings, formatsIn, selectCategory, captureProfile, MODES, HEIGHT_MODES, FORMATS } from '../lib/settings.js';
+import {
+  loadSettings,
+  saveSettings,
+  formatsIn,
+  selectCategory,
+  captureProfile,
+  delayChoices,
+  openSettingsPage,
+  MODES,
+  HEIGHT_MODES,
+  SIZE_UNITS,
+  FORMATS,
+} from '../lib/settings.js';
 import { formatFilename, openScreenshotFolder } from '../lib/output.js';
 import { t, localizeDocument } from '../lib/i18n.js';
+import { setupAbout } from '../ui/about.js';
 
 localizeDocument();
 
@@ -91,6 +104,16 @@ async function send(type) {
   return chrome.runtime.sendMessage({ to: 'background', type, windowId: win.id });
 }
 
+function renderDelay() {
+  $('#delay').replaceChildren(...delayChoices(settings.delaySec).map((n) => new Option(t('delayShort', n), n)));
+  $('#delay').value = settings.delaySec;
+}
+
+$('#delay').addEventListener('change', async (e) => {
+  settings.delaySec = Number(e.target.value);
+  await saveSettings(settings);
+});
+
 $('#category').addEventListener('change', async (e) => {
   selectCategory(settings, e.target.value);
   await saveSettings(settings);
@@ -128,9 +151,10 @@ $('#openStudio').addEventListener('click', async () => {
   window.close();
 });
 
-$('#openOptions').addEventListener('click', () => chrome.runtime.openOptionsPage());
+$('#openOptions').addEventListener('click', () => openSettingsPage('options'));
 $('#openFolder').addEventListener('click', openScreenshotFolder);
-$('#editFormats').addEventListener('click', () => chrome.runtime.openOptionsPage());
+$('#editFormats').addEventListener('click', () => openSettingsPage('formats'));
+setupAbout($('#openAbout'));
 
 async function showShortcuts() {
   const commands = await chrome.commands.getAll();
@@ -153,5 +177,7 @@ renderFormats();
 renderSegment($('#mode'), MODES, 'mode');
 renderSegment($('#fileType'), FORMATS, 'fileType');
 renderSegment($('#heightMode'), HEIGHT_MODES, 'heightMode');
+renderSegment($('#sizeUnit'), SIZE_UNITS, 'sizeUnit');
+renderDelay();
 showShortcuts();
 showLastResult();

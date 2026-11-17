@@ -416,22 +416,61 @@
   "activeInPopup": {
     "message": "Currently selected in the popup"
   },
-  "aboutSection": {
-    "message": "About"
-  },
   "aboutVersion": {
-    "message": "Version $1"
+    "message": "Version"
   },
   "aboutLicense": {
-    "message": "Free and open source (MIT licence). Everything runs locally – no servers, no tracking."
+    "message": "License"
   },
   "aboutSource": {
-    "message": "Source code"
+    "message": "Source"
   },
   "aboutPrivacy": {
-    "message": "Privacy policy"
+    "message": "Privacy"
   },
   "aboutFeedback": {
     "message": "Send feedback"
+  },
+  "aboutRate": {
+    "message": "Rate on the Chrome Web Store"
+  },
+  "tabOptions": {
+    "message": "Options"
+  },
+  "about": {
+    "message": "About PostReady"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "aboutTagline": {
+    "message": "Screenshots in the exact size"
+  },
+  "aboutMotto": {
+    "message": "PICK. FIT. SHOOT."
+  },
+  "aboutAuthor": {
+    "message": "Author"
+  },
+  "aboutPrivacyLink": {
+    "message": "Policy"
+  },
+  "aboutLocal": {
+    "message": "Everything runs locally – no servers, no tracking."
+  },
+  "aboutAi": {
+    "message": "Built with the help of AI (Claude by Anthropic)"
+  },
+  "sizeUnit": {
+    "message": "Pixels"
+  },
+  "sizeUnitCssShort": {
+    "message": "Logical"
+  },
+  "sizeUnitDeviceShort": {
+    "message": "Physical"
+  },
+  "delayShort": {
+    "message": "⏱ $1 s"
   }
 }

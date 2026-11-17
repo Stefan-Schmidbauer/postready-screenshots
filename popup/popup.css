@@ -47,10 +47,12 @@ body {
 
 .options {
   display: grid;
-  grid-template-columns: 1fr auto;
   gap: 8px;
   margin-top: 10px;
 }
+/* Two segments per row; they only wrap if the labels don't fit (long translations, big fonts) */
+.seg-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.seg-row .seg { flex: 1 1 auto; }
 
 .seg {
   display: flex;
@@ -101,9 +103,17 @@ body {
 
 .actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
   gap: 8px;
   margin-top: 10px;
+}
+
+.delay {
+  min-height: 34px;
+  padding: 4px 6px;
+  border-radius: 8px;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
 }
 
 .status {
