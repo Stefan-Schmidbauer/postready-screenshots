@@ -88,7 +88,10 @@ jobs:
 
             ## Installation
 
-            To load this build directly:
+            Most people want the store version:
+            **[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/postready-screenshots/jgplipgmkfmcknlpakfaoihdhafcgpfi)**
+
+            To load this build directly instead:
 
             1. Download the zip
             2. Extract to a folder

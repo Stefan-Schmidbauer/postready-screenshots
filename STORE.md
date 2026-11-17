@@ -306,13 +306,12 @@ Extension ID: `jgplipgmkfmcknlpakfaoihdhafcgpfi` — set as the `CWS_EXTENSION_I
 variable of the `store` environment (see [RELEASING.md](RELEASING.md); it is
 public, not a credential).
 
-Listing URL (live once the review has passed):
-<https://chromewebstore.google.com/detail/jgplipgmkfmcknlpakfaoihdhafcgpfi>
+Listing URL:
+<https://chromewebstore.google.com/detail/postready-screenshots/jgplipgmkfmcknlpakfaoihdhafcgpfi>
 
-Once it is live, also add the store link to the README, to the release notes in
-[.github/workflows/build.yml](.github/workflows/build.yml) and a "Rate on
-Chrome Web Store" link (listing URL + `/reviews`) to the About section in the
-settings.
+It is linked from the README, the release notes in
+[.github/workflows/build.yml](.github/workflows/build.yml) and, with `/reviews`,
+from the About dialog ("Rate on the Chrome Web Store", ⓘ in the popup and settings).
 
 ## Building and releasing
 

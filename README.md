@@ -16,6 +16,16 @@ extension you want to show off.
 
 Requires Chrome 116 or newer.
 
+### From the Chrome Web Store (recommended)
+
+1. Open the [store listing](https://chromewebstore.google.com/detail/postready-screenshots/jgplipgmkfmcknlpakfaoihdhafcgpfi)
+   and click **Add to Chrome**.
+2. Optionally pin the extension to the toolbar.
+
+### From source
+
+For development, or to run a build you made yourself:
+
 1. Clone this repository.
 2. Open `chrome://extensions/`.
 3. Enable **Developer mode** in the top right.
